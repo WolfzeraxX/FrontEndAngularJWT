@@ -1,0 +1,9 @@
+version: '3.4'
+
+services:
+  angularfront1:
+    image: angularfront1
+    build:
+      .
+    ports:
+      - 3000:3000

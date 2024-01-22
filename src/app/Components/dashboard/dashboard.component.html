@@ -1,0 +1,35 @@
+<div class="outer">
+    <div class="container">
+        <div class="row">
+            <div class="offset-md-2 col-lg-5 col-md-7 offset-lg-4 offset-md-3">
+                <div class="panel border bg-white">
+                    <div class="panel-heading">
+                        <h3 class="pt-3 font-weight-bold">Calculadora</h3>
+                    </div>
+                    <div class="panel-body p-3">
+
+<div class="container-sm">
+    <form [formGroup]="formGroup">
+      <label class="form-label">Valor 1</label>
+      <input class="form-control" type="number" formControlName="number1" />
+      <label class="form-label">Valor 2</label>
+      <input class="form-control" type="number" formControlName="number2" />
+        
+          <button class="btn btn-dark" (click)="setOperation('soma')">+</button>
+          <button class="btn btn-dark" (click)="setOperation('subitracao')">-</button>
+          <button class="btn btn-dark" (click)="setOperation('multiplicacao')">*</button>
+          <button class="btn btn-dark" (click)="setOperation('divisao')">/</button>
+          <button class="btn btn-primary" (click)="calculate()">=</button>
+
+            <span *ngIf="result  | async as result"id="resultado"
+              class="p-3 text-primary-emphasis bg-primary-subtle border border-primary-subtle rounded-3 resultado">{{ result }}</span>
+        </form>
+    
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div></div>
+    
